@@ -66,7 +66,7 @@ int num = num::func();
 ### using
 さっきの`num::func()`めっちゃ使うからさっさと呼び出したい！そんなときは…
 ```c++
-using num::func
+using num::func;
 ```
 って書くと
 
