@@ -259,4 +259,6 @@ int main() {
 
 でも、毎回名前空間名を書くのは面倒臭い・・・そんな時は`using namespace 名前空間名;`と書くことによって、省略をすることができます。
 
+namespaceについて[こちらで詳しく解説しています。](x1-Namespace.md)
+
 <前に戻る - [目次へ](../README.md) - [次へ進む](02-Function.md)>
