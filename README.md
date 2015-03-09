@@ -9,7 +9,8 @@ C言語の学習は [苦しんで覚えるC言語](http://9cguide.appspot.com/) 
 - 第2章 - [関数と関数テンプレート](doc/02-Function.md)
 - 第3章 - [クラスの基礎](doc/03-ClassIntro.md)
 	- [練習問題回答](doc/03-ClassIntro-Answer.md)
-- 第4章 - (未定)
+- 第4章 - [クラスのアクセス制限とファイル分割](doc/04-ClassAccessibility.md)
+	- [練習問題回答](doc/04-ClassAccessibility-Answer.md)
 
 ### ナンバリング未定
 - [たのしい例外処理 基礎編](doc/xx-ExceptionHandling.md)

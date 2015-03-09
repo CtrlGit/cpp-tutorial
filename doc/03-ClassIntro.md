@@ -207,4 +207,4 @@ I で作成した`Car`クラスのインスタンスを作成し、ナンバー�
 
 [練習問題の回答](03-ClassIntro-Answer.md)
 
-<[前に戻る](02-Function.md) - [目次へ](../README.md) - 次へ進む>
+<[前に戻る](02-Function.md) - [目次へ](../README.md) - [次へ進む](04-ClassAccessibility.md)>
