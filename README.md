@@ -11,6 +11,8 @@ C言語の学習は [苦しんで覚えるC言語](http://9cguide.appspot.com/) 
 	- [練習問題回答](doc/03-ClassIntro-Answer.md)
 - 第4章 - [クラスのアクセス制限とファイル分割](doc/04-ClassAccessibility.md)
 	- [練習問題回答](doc/04-ClassAccessibility-Answer.md)
+- 第5章 - [コンストラクタとデストラクタ](doc/05-ConstructorDestructor.md)
+- 第6章 - (未定)
 
 ### ナンバリング未定
 - [たのしい例外処理 基礎編](doc/xx-ExceptionHandling.md)

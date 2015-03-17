@@ -252,4 +252,4 @@ int main() {
 
 [練習問題の回答](04-ClassAccessibility-Answer.md)
 
-<[前に戻る](03-ClassIntro.md) - [目次へ](../README.md) - 次へ進む>
+<[前に戻る](03-ClassIntro.md) - [目次へ](../README.md) - [次へ進む](05-ConstructorDestructor.md)>
