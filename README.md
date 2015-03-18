@@ -15,5 +15,6 @@ C言語の学習は [苦しんで覚えるC言語](http://9cguide.appspot.com/) 
 - 第6章 - (未定)
 
 ### ナンバリング未定
+- [boolのおはなし](doc/xx-Bool.md)
 - [たのしい例外処理 基礎編](doc/xx-ExceptionHandling.md)
 - [たのしい例外処理 応用編](doc/xx-ExceptionHandling2.md)
