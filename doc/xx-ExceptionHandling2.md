@@ -7,35 +7,33 @@
 `throw`はtryブロックの中で複数書くこともできる。
 
 ```c++
-try{
-  if(sugoi < yabai){
-    throw 10;
-  }
-  else{
-    throw 100;
-  }
+try {
+    if (sugoi < yabai) {
+        throw 10;
+    } else {
+        throw 100;
+    }
 }
-catch(int num){
-  cout << num << endl; // 10 または 100 を出力する
+catch (int num) {
+    cout << num << endl; // 10 または 100 を出力する
 }
 ```
 
 `catch`も **違う型ならば** 1つの`try`ブロックに対して複数書くことができる。
 
 ```c++
-try{
-  if(sugoi < yabai){
-    throw 10;
-  }
-  else{
-    throw "ラーメン二郎";
-  }
+try {
+    if (sugoi < yabai) {
+        throw 10;
+    } else {
+        throw "ラーメン二郎";
+    }
 }
-catch(int num){
-  cout << num << endl;
+catch (int num) {
+    cout << num << endl;
 }
-catch(string str){
-  cout << str << endl;
+catch (string str) {
+    cout << str << endl;
 }
 ```
 
@@ -46,8 +44,8 @@ catch(string str){
 (紹介はするけど適当に使うと何が起きるか分からないので、使うときは中身に処理は書かないほうがいいよ)
 
 ```c++
-catch(...){
-  // 例外が起きた時の処理
+catch (...) {
+    // 例外が起きた時の処理
 }
 ```
 
@@ -56,23 +54,21 @@ catch(...){
 以下の例のように、組み合わせて使うことも出来るぞ！
 
 ```c++
-try{
-  if(sugoi < yabai){
-    throw 10;
-  }
-  else if(sugoi == yabai){
-    throw "ラーメン二郎";
-  }
-  else{
-    double array[10];
-    throw array[10]; // ちなみに配列をthrowすると、先頭のポインタが渡されます
+try {
+    if (sugoi < yabai) {
+        throw 10;
+    } else if (sugoi == yabai) {
+        throw "ラーメン二郎";
+    } else {
+        double array[10];
+        throw array[10]; // ちなみに配列をthrowすると、先頭のポインタが渡されます
   }
 }
-catch(int num){
-  cout << num << endl;
+catch (int num) {
+    cout << num << endl;
 }
-catch(...){
-  cout << "int 以外の何か" << endl;
+catch (...) {
+    cout << "int 以外の何か" << endl;
 }
 ```
 
@@ -82,7 +78,7 @@ catch(...){
 さあ、本題に入ろう。STLでは例外をバシバシ投げてくる。例えば`stoi()`。
 
 ```c++
-  num = stoi("十一万四千五百十四"); // std::invalid_argument
+num = stoi("十一万四千五百十四"); // std::invalid_argument
 ```
 
 ここで`stoi()`は、文字が突っ込まれたから例外を吐いたというのはなんとなく分かるはずだ。
@@ -92,8 +88,8 @@ catch(...){
 ```c++
 class invalid_argument : public logic_error {
 public:
-  explicit invalid_argument (const string& what_arg);
-  explicit invalid_argument (const char* what_arg);
+    explicit invalid_argument(const string& what_arg);
+    explicit invalid_argument(const char* what_arg);
 };
 ```
 
@@ -103,15 +99,15 @@ public:
 
 ```c++
 std::stoi(std::string str){
-  int num;
-  num = sugoi_syori();// strをintに変えちゃうすごい処理
+    int num;
+    num = sugoi_syori(); // strをintに変えちゃうすごい処理
 
-  if(num != num_jyanai()){ // num が数字じゃないとき
-    std::invalid_argument exception;
-    throw exception;
-  }
+    if (num != num_jyanai()) { // num が数字じゃないとき
+        std::invalid_argument exception;
+        throw exception;
+    }
 
-  // なんかごちゃごちゃした処理
+    // なんかごちゃごちゃした処理
 }
 
 ```
@@ -128,16 +124,16 @@ std::stoi(std::string str){
 
 using namespace std;
 
-int main(){
-  int num;
-  try{
-    num = stoi("十一万四千五百十四");
-  }
-  catch(invalid_argument e){
-    cout << "文字が突っ込まれました。" << endl;  
-  }
+int main() {
+    int num;
+    try {
+        num = stoi("十一万四千五百十四");
+    }
+    catch (invalid_argument e) {
+        cout << "文字が突っ込まれました。" << endl;  
+    }
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -152,19 +148,19 @@ int main(){
 
 using namespace std;
 
-int main(){
-  int num;
-  vector<int> array;
-  array.push_back(1);
+int main() {
+    int num;
+    vector<int> array;
+    array.push_back(1);
 
-  try{
-    num = array.at(1);
-  }
-  catch(out_of_range e){
-    cout << "範囲外にアクセスしようとしました。" << endl;  
-  }
+    try {
+        num = array.at(1);
+    }
+    catch (out_of_range e) {
+        cout << "範囲外にアクセスしようとしました。" << endl;  
+    }
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -181,16 +177,16 @@ int main(){
 
 using namespace std;
 
-int main(){
-  int num;
-  try{
-    num = stoi("十一万四千五百十四");
-  }
-  catch(exception e){
-    cout << "Exception : " << e.what() << endl; // e.what() でエラーの内容が出てくる  
-  }
+int main() {
+    int num;
+    try {
+        num = stoi("十一万四千五百十四");
+    }
+    catch (exception e) {
+        cout << "Exception : " << e.what() << endl; // e.what() でエラーの内容が出てくる  
+    }
 
-  return 0;
+    return 0;
 }
 ```
 

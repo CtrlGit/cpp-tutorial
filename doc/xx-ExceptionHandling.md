@@ -10,13 +10,13 @@ C言語には`stdlib.h`に`atoi()`っていう文字をint型の数値にして�
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-  int num;
-  num = atoi("100");
+int main() {
+    int num;
+    num = atoi("100");
 
-  printf("%d", num);
+    printf("%d", num);
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -30,13 +30,13 @@ int main(){
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-  int num;
-  num = atoi("十一万四千五百十四");
+int main() {
+    int num;
+    num = atoi("十一万四千五百十四");
 
-  printf("%d", num);
+    printf("%d", num);
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -56,13 +56,13 @@ int main(){
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-  int num;
-  num = atoi("11万4千5百十4");
+int main() {
+    int num;
+    num = atoi("11万4千5百十4");
 
-  printf("%d", num);
+    printf("%d", num);
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -85,13 +85,13 @@ int main(){
 #include <string>
 using namespace std;
 
-int main(){
-  int num;
-  num = stoi("100");
+int main() {
+    int num;
+    num = stoi("100");
 
-  cout << num << endl;
+    cout << num << endl;
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -109,13 +109,13 @@ int main(){
 #include <string>
 using namespace std;
 
-int main(){
-  int num;
-  num = stoi("十一万四千五百十四");
+int main() {
+    int num;
+    num = stoi("十一万四千五百十四");
 
-  cout << num << endl;
+    cout << num << endl;
 
-  return 0;
+    return 0;
 }
 ```
 
@@ -161,16 +161,16 @@ int main(){
 「このへん例外があるかも」と教えてあげるには、`try`ブロックを使う。
 
 ```c++
-try{
-  // 例外が起こるかもしれない処理
+try {
+    // 例外が起こるかもしれない処理
 }
 ```
 
 何も考えずに、ここに例外が起こるかもしれない処理を書いてあげるだけだ。
 
 ```c++
-try{
-  num = stoi("十一万四千五百十四");  // std::invalid_argument
+try {
+    num = stoi("十一万四千五百十四");  // std::invalid_argument
 }
 ```
 
@@ -185,9 +185,9 @@ throw exception; // exceptionは任意の値
 こんな感じで、
 
 ```c++
-try{
-  // なんか処理
-  throw 10;
+try {
+    // なんか処理
+    throw 10;
 }
 ```
 
@@ -204,8 +204,8 @@ try{
 「この例外はこうしてね」と教えてあげるには、`catch`ブロックを使う。
 
 ```c++
-catch(type arg){
-  // 例外が起きた時の処理
+catch (type arg) {
+    // 例外が起きた時の処理
 }
 ```
 
@@ -214,7 +214,7 @@ typeにはthrowされた値の型、argにはthrowされた値が入る変数を
 `throw 10;`をcatchしてあげたいなら、次のように書けばよい。
 
 ```c++
-catch(int num){
+catch (int num) {
     // なんか処理
 }
 ```
@@ -229,15 +229,15 @@ catch(int num){
 #include <iostream>
 using namespace std;
 
-int main(){
-  try{
-    throw 10;       // 例外発生
-  }
-  catch(int num){   // num には throw された 10 が入る
-    cout << num << endl;
-  }
+int main() {
+    try {
+        throw 10;       // 例外発生
+    }
+    catch (int num) {   // num には throw された 10 が入る
+        cout << num << endl;
+    }
 
-  return 0;
+    return 0;
 }
 ```
 実行結果
