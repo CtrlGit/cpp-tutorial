@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace std; /* おまじない */
 
-int main(){
-  cout << "Hello, World!" << endl;
-  return 0;
+int main() {
+    cout << "Hello, World!" << endl;
+    return 0;
 }
 ```
 この2行目のおまじないを外すと…
@@ -13,9 +13,9 @@ int main(){
 ```c++
 #include <iostream>
 
-int main(){
-  std::cout << "Hello, World!" << std::endl;
-  return 0;
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
 }
 ```
 っていうのを1章の終わりにさらっとやりましたね。名前空間のお話です。
@@ -39,18 +39,18 @@ int main(){
 自分で名前空間を定義するには、
 
 ```c++
-namespace num{
-  int func(); // 宣言
-  int sum();
-  ...
+namespace num {
+    int func(); // 宣言
+    int sum();
+    ...
 }
 
-int num::func(){
-  // 処理
+int num::func() {
+    // 処理
 }
 
-int num::sum(){
-  // 処理
+int num::sum() {
+    // 処理
 }
 ```
 
