@@ -141,4 +141,4 @@ double m = max_t<double>(i1, i2);
 
 同じ記述を何度もせずに済む。DRY原則に則ってる。ｲｲﾈ!ｲｲﾈ!ｲｲﾈ!ｲｲﾈ!
 
-<[前に戻る](01-Hello.md) - [目次へ](../README.md) - [次へ進む](03-ClassIntro.md)>
+<[前に戻る](01-Hello.md) - [目次へ](../../README.md) - [次へ進む](03-ClassIntro.md)>

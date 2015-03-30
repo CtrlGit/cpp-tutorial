@@ -272,4 +272,4 @@ int main() {
 
 namespaceについて[こちらで詳しく解説しています。](01-Namespace.md)
 
-<前に戻る - [目次へ](../README.md) - [次へ進む](02-Function.md)>
+<前に戻る - [目次へ](../../README.md) - [次へ進む](02-Function.md)>

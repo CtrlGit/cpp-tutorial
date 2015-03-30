@@ -260,4 +260,4 @@ int main() {
 
 デストラクタは自分で呼ぶことができません。メモリが解放される時に自動で呼ばれます。メモリの確保・解放を動的にやればいいんだけれども、それについてはまだ説明してないからまた今度。
 
-<[前に戻る](04-ClassAccessibility.md) - [目次へ](../README.md) - [次へ進む](06-DynamicAllocation.md)>
+<[前に戻る](04-ClassAccessibility.md) - [目次へ](../../README.md) - [次へ進む](06-DynamicAllocation.md)>

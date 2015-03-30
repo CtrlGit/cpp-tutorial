@@ -192,4 +192,4 @@ delete[] p;
 
 それだけ注意。
 
-<[前に戻る](05-ConstructorDestructor.md) - [目次へ](../README.md) - 次へ進む>
+<[前に戻る](05-ConstructorDestructor.md) - [目次へ](../../README.md) - 次へ進む>
