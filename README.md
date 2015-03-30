@@ -15,6 +15,9 @@ C言語の学習は [苦しんで覚えるC言語](http://9cguide.appspot.com/) 
 - 第6章 - [メモリの動的確保](doc/main/06-DynamicAllocation.md)
 - 第7章 - (未定)
 
+### 実用例
+- [DXライブラリの画像管理](doc/ex/DxLibGraph.md)
+
 ### ナンバリング未定
 - [boolのおはなし](doc/xx-Bool.md)
 - [たのしい例外処理 基礎編](doc/xx-ExceptionHandling.md)
