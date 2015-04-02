@@ -13,7 +13,8 @@ C言語の学習は [苦しんで覚えるC言語](http://9cguide.appspot.com/) 
 	- [練習問題回答](doc/main/04-ClassAccessibility-Answer.md)
 - 第5章 - [コンストラクタとデストラクタ](doc/main/05-ConstructorDestructor.md)
 - 第6章 - [メモリの動的確保](doc/main/06-DynamicAllocation.md)
-- 第7章 - (未定)
+- 第7章 - [参照](doc/main/07-Reference.md)
+- 第8章 - (未定)
 
 ### 実用例
 - [DXライブラリの画像管理](doc/ex/DxLibGraph.md)
