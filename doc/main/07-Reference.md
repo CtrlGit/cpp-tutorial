@@ -173,4 +173,4 @@ int main() {
 
 メチャメチャ楽に解決。このように、C++で関数に構造体やクラス変数を渡すときは、大抵は参照を使って渡します。
 
-<[前に戻る](06-DynamicAllocation.md) - [目次へ](../../README.md) - 次へ進む>
+<[前に戻る](06-DynamicAllocation.md) - [目次へ](../../README.md) - [次へ進む](08-StaticMember.md)>
