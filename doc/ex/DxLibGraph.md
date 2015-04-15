@@ -35,7 +35,7 @@ class DxGraph
 {
 private:
 	// グラフィックハンドル
-	int handle;
+	std::shared_ptr<int> handle;
 
 public:
 	// 概要:
@@ -72,21 +72,20 @@ public:
 DxGraph::DxGraph(std::string fileName)
 {
 	// LoadGraph() 関数で画像を読み込む
-	handle = LoadGraph(fileName.c_str());
-	if (handle == -1)
+	handle.reset(new int(LoadGraph(fileName.c_str())), [](int *h) { DeleteGraph(*h); });
+	if (*handle == -1)
 		throw "LoadGraph: 画像読み込みエラー";
 }
 
 DxGraph::~DxGraph()
 {
-	// DeleteGraph() 関数で解放
-	DeleteGraph(handle);
+
 }
 
 bool DxGraph::draw(int x, int y)
 {
 	// DrawGraph() 関数で描画
-	int result = DrawGraph(x, y, handle, true);
+	int result = DrawGraph(x, y, *handle, true);
 	return result != -1;
 }
 ```
@@ -108,16 +107,12 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR cmdLine, int cmdS
 	// DXライブラリ初期化
 	if (DxLib_Init() == -1) return -1;
 
-	// DxGraph オブジェクトの作成
-	DxGraph* gTest = new DxGraph("test.png");
-
+	DxGraph gTest("test.png");
+	
 	// (0, 0) の位置に描画
-	gTest->draw(0, 0);
+	gTest.draw(0, 0);
 
 	WaitKey();
-
-	// オブジェクトを削除(メモリ解放)
-	delete gTest;
 
 	// DXライブラリ終了処理
 	DxLib_End();
